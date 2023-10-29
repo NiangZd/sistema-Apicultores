@@ -1,0 +1,11 @@
+
+*{
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+body {
+    background-image: url(../assets/backgroundabelhas.jpg);
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}

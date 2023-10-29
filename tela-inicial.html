@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ApiPro</title>
+        <link rel="stylesheet" href="css/inicial.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="shortcut icon" href="assets/logoAP.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <div id="barra-lateral" class="sidebar d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+               <svg class="bi me-2" width="40" height="32">
+                  <use xlink:href="#"></use>
+               </svg>
+               <span class="fs-4">ApiPro</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+               <li class="nav-item">
+                  <a href="tela-inicial.html" class="nav-link active" aria-current="page">
+                     <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#home"></use>
+                     </svg>
+                     Início
+                  </a>
+               </li>
+               <li>
+                  <a href="registrar-colmeia.html" class="nav-link text-white">
+                     <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#speedometer2"></use>
+                     </svg>
+                     Registrar colmeia
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav-link text-white">
+                     <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#table"></use>
+                     </svg>
+                     Listar colmeias
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav-link text-white">
+                     <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#grid"></use>
+                     </svg>
+                     Notificações
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav-link text-white">
+                     <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#people-circle"></use>
+                     </svg>
+                     Condições climáticas
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav-link text-white">
+                     <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#people-circle"></use>
+                     </svg>
+                     Comunidade virtual
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav-link text-white">
+                     <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#people-circle"></use>
+                     </svg>
+                     Mapa
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav-link text-white">
+                     <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#people-circle"></use>
+                     </svg>
+                     Ajuda & Suporte
+                  </a>
+               </li>
+            </ul>
+            <hr>
+            <div class="dropdown">
+               <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+               <img src="assets/user.png" alt="" width="32" height="32" class="rounded-circle me-2">
+               <strong>@Usuário</strong>
+               </a>
+               <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                  <li><a class="dropdown-item" href="#">Meu perfil</a></li>
+                  <li><a class="dropdown-item" href="#">Contatos frequentes</a></li>
+                  <li><a class="dropdown-item" href="#">Configurações</a></li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Sair</a></li>
+               </ul>
+            </div>
+        </div>
+        <main class="column">
+           <header id="inicio">
+               <h1 id="user-bv">BEM VINDO, @USUARIO</h1>
+               <nav id="topicos-iniciais">
+                  <div class="block-top">
+                     <span class="span-block">0</span>
+                     <p class="info-blocks">Colmeias registradas</p>
+                  </div>
+                  <div class="block-top">
+                     <span class="span-block">0</span>
+                     <p class="info-blocks">Colmeias no limite</p>
+                  </div>
+                  <div class="block-top">
+                     <span class="span-block">0</span>
+                     <p class="info-blocks">Notificações</p>
+                  </div>
+                  <div class="block-top">
+                     <span class="span-block">0°</span>
+                     <i class="fa-solid fa-cloud fa-2xl"></i>
+                   </div>
+               </nav>
+               <hr style="width: 153vh;">
+           </header>
+           <section id="sessao-inicial">
+
+               <!--            COLMEIAS MAIS LOTADAS              -->
+
+               <h2 style="font-size: 1.5rem; margin-left: 15px;">Melgueiras mais lotadas</h2><br>
+               <div class="block-sec">
+                  <table>
+                     <tr>
+                        <td class="id-mel">#</td>
+                        <td class="id-mel">Raça</td>
+                        <td class="id-mel">Localização</td>
+                        <td class="id-mel">Pesagem</td>
+                     </tr>
+                     <tr>
+                        <td class="id-mel">1</td>
+                        <td class="id-mel">Europeia</td>
+                        <td class="id-mel">A1</td>
+                        <td class="id-mel">9.50kg</td>
+                     </tr>
+                     <tr>
+                        <td class="id-mel">2</td>
+                        <td class="id-mel">Africana</td>
+                        <td class="id-mel">A2</td>
+                        <td class="id-mel">9.20kg</td>
+                     </tr>
+                     <tr>
+                        <td class="id-mel">3</td>
+                        <td class="id-mel">Jataí</td>
+                        <td class="id-mel">A3</td>
+                        <td class="id-mel">8.80kg</td>
+                     </tr>
+                  </table>
+              </div>  
+           </section>
+
+           <section id="sessao-inicial">
+
+            <!--            ULTIMAS COLMEIAS REGISTRADAS             -->
+
+            <h2 style="font-size: 1.5rem; margin-left: 15px;">Últimas colmeias registradas</h2><br>
+            <div class="block-sec">
+               <table>
+                  <tr style="padding-top: 0px;">
+                     <td class="id-mel">#</td>
+                     <td class="id-mel">Raça</td>
+                     <td class="id-mel">Localização</td>
+                     <td class="id-mel">Pesagem</td>
+                  </tr>
+                  <tr>
+                     <td class="id-mel">1</td>
+                     <td class="id-mel">Europeia</td>
+                     <td class="id-mel">A1</td>
+                     <td class="id-mel">9.50kg</td>
+                  </tr>
+                  <tr>
+                     <td class="id-mel">2</td>
+                     <td class="id-mel">Africana</td>
+                     <td class="id-mel">A2</td>
+                     <td class="id-mel">9.20kg</td>
+                  </tr>
+                  <tr>
+                     <td class="id-mel">3</td>
+                     <td class="id-mel">Jataí</td>
+                     <td class="id-mel">A3</td>
+                     <td class="id-mel">8.80kg</td>
+                  </tr>
+               </table>
+           </div>  
+        </section>
+         </main>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
