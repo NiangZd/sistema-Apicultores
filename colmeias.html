@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colmeias - ApiPro</title>
+
+    <link rel="stylesheet" href="css/inicial.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="shortcut icon" href="assets/logoAP.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="css/crud.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <div id="barra-lateral" class="sidebar d-flex flex-column flex-shrink-0 p-3 text-white bg-dark"
+        style="width: 280px;">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32">
+                <use xlink:href="#"></use>
+            </svg>
+            <span class="fs-4">ApiPro</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="home.html" class="nav-link" aria-current="page">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#home"></use>
+                    </svg>
+                    Início
+                </a>
+            </li>
+            <li>
+                <a href="colmeias.html" class="nav-link text-white active">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#speedometer2"></use>
+                    </svg>
+                    Painel de colmeias
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-white">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#people-circle"></use>
+                    </svg>
+                    Comunidade virtual
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-white">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#people-circle"></use>
+                    </svg>
+                    Mapa
+                </a>
+            </li>
+            <li>
+                <a href="suporte.html" class="nav-link text-white">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#people-circle"></use>
+                    </svg>
+                    Ajuda & Suporte
+                </a>
+            </li>
+        </ul>
+        <hr>
+        <div class="dropdown">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/user.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong id="nUser"></strong>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                <li><a class="dropdown-item" href="#">Meu perfil</a></li>
+                <li><a class="dropdown-item" href="#">Contatos frequentes</a></li>
+                <li><a class="dropdown-item" href="#">Configurações</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" onclick="sair()" href="login.html">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="mt-5 mb-5">Registre suas colmeias</h2>
+        <div class="mb-5">
+            <div class="row">
+                <!-- Form -->
+                <form class="row needs-validation" id="form" novalidate>
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="localizacao" class="form-label">Localização</label>
+                        <input type="text" name="loc" class="form-control" id="localizacao"
+                            placeholder="Digite a Localização..." required>
+                        <div class="error" id="localizacaoErrorMsg"></div>
+                    </div>
+
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="tipo" class="form-label">Tipo de colmeia</label>
+                        <input type="text" name="tipo" class="form-control" id="tipo"
+                            placeholder="Digite o tipo da colmeia..." required>
+                        <div class="error" id="tipoErrorMsg"></div>
+                    </div>
+
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="data" class="form-label">Data de criação</label>
+                        <input type="date" name="data" class="form-control" id="data"
+                            placeholder="Digite a data em que a colmeia foi criada ou instalada" required>
+                        <div class="error" id="dataErrorMsg"></div>
+                    </div>
+
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="pesagem" class="form-label">Pesagem</label>
+                        <input type="text" name="pesagem" class="form-control" id="pesagem"
+                            placeholder="Pesagem da melgueira..." required>
+                        <div class="error" id="pesagemErrorMsg"></div>
+                    </div>
+
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="status" class="form-label">Status da colmeia</label>
+                        <input type="text" name="status" class="form-control" id="status"
+                            placeholder="Ativa, inativa, em quarentena..." required>
+                        <div class="error" id="statusErrorMsg"></div>
+                    </div>
+
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="raca" class="form-label">Raça das abelhas</label>
+                        <input type="text" name="raca" class="form-control" id="raca"
+                            placeholder="Digite a raça das abelhas..." required>
+                        <div class="error" id="racaErrorMsg"></div>
+                    </div>
+
+                    <!-- Submit/Update button -->
+                    <div class="col-lg-12 mt-5">
+                        <button type="button" class="btn btn-success" id="Submit" onclick="addColmeia()">
+                            Adicionar colmeia
+                        </button>
+                        <button type="button" class="btn btn-primary" id="Update" onclick="addColmeia()">
+                            Atualizar colmeia
+                        </button>
+                    </div>
+                </form> <!-- End Form -->
+
+                <!-- Success alert -->
+                <div class="alert alert-success mt-3">
+                    <strong> Colmeia adicionada com sucesso!</strong>
+                </div>
+                <!-- Delete alert -->
+                <div class="alert alert-danger mt-3">
+                    <strong>Colmeia deletada com sucesso!</strong>
+                </div>
+                <!-- Update alert -->
+                <div class="alert alert-info mt-3">
+                    <strong>Colmeia atualizada com sucesso!</strong>
+                </div>
+            </div> <!-- End -->
+        </div>
+
+        <hr>
+        <div class="row mt-5">
+            <h3>Lista de colmeias</h3>
+
+            <!-- Search bar -->
+            <div class="mt-3 mb-3">
+                <input class="text" id="searchBar" onkeyup="SearchBar()" placeholder="Procurar colmeias...">
+            </div>
+
+            <!-- Modal -->
+            <div id="myModal" class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Informações da Colmeia</h5>
+                        </div>
+                        <br>
+                        <div id="modalInfo">
+                        </div>
+                        <br>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" class="close"
+                                onclick="closeModal()">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End modal -->
+
+            <!-- Tabela -->
+            <div class="table-responsive col-12">
+                <table class="table table-sortable table-bordered table-hover" id="userTable">
+                    <thead>
+                        <tr>
+                            <th style="text-align: center; background-color: #FFD700;">Localização</i></th>
+                            <th style="text-align: center; background-color: #FFD700;">Tipo de colmeia</th>
+                            <th style="text-align: center; background-color: #FFD700;">Data de criação</th>
+                            <th style="text-align: center; background-color: #FFD700;">Pesagem</th>
+                            <th style="text-align: center; background-color: #FFD700;">Status</th>
+                            <th style="text-align: center; background-color: #FFD700;">Raça</th>
+                            <th style="text-align: center; background-color: #FFD700;">Ações</i></th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTableBody"></tbody>
+                </table>
+                <label for="message" id="message"></label>
+            </div>
+        </div>
+
+        <div class="row mt-3 mb-5">
+            <div class="column">
+                <div class="pagination-showresult">
+                    <span id="contagemColmeias"></span>
+                    <span id="paginationResultCount"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/home.js"></script>
+    <script src="js/crud.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+</html>

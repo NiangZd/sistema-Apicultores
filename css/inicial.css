@@ -29,11 +29,11 @@ body {
 }
 .sidebar .nav-link.active {
     color: black !important;
-    background-color: #ffff20 !important;
+    background-color: #FFD700 !important;
 }
 .nav-link:hover{
-    background-color: #ffff3aa8 !important;
-    color: black !important;
+    background-color: #ffd9006e !important;
+    color: white !important;
 }
 .block-top, .block-sec{
     padding: 18px;
@@ -100,11 +100,11 @@ h2{
     box-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
 .block-sec:hover{
-    background-color: rgb(255, 255, 0);
+    background-color: #FFD700;
     box-shadow: 3px 1px 9px rgb(0, 0, 0);
 }
 .block-top:hover{
-    background-color: rgb(255, 255, 0);
+    background-color: #FFD700;
     box-shadow: 3px 1px 9px rgb(0, 0, 0);
 }
 a{
